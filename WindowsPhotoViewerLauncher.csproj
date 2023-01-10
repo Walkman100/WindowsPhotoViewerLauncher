@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>Properties\App.manifest</ApplicationManifest>
+    <ApplicationIcon>Properties\WindowsPhotoViewerLauncher.ico</ApplicationIcon>
   </PropertyGroup>
 
 </Project>
