@@ -21,8 +21,16 @@ namespace WindowsPhotoViewerLauncher {
             if (!File.Exists(runDLLPath))
                 runDLLPath = Path.Combine(Environment.GetEnvironmentVariable("WinDir") ?? "", "System32", "rundll32.exe");
 
-            foreach (string item in args)
-                System.Diagnostics.Process.Start(runDLLPath, $"\"{photoViewerDLLPath}\", ImageView_Fullscreen {item}");
+            const string longFilePathPrefix = @"\\?\";
+            const string longFilePathPrefixDoNotStrip = @"\\?\Volume{";
+
+            foreach (string item in args) {
+                string item2 = item;
+                if (item2.StartsWith(longFilePathPrefix) && !item2.StartsWith(longFilePathPrefixDoNotStrip))
+                    item2 = item2.Substring(longFilePathPrefix.Length); // Windows Photo Viewer (or maybe rundll32) doesn't like the absolute path prefix
+
+                System.Diagnostics.Process.Start(runDLLPath, $"\"{photoViewerDLLPath}\", ImageView_Fullscreen {item2}");
+            }
         }
 
         static DialogResult MessageBox(string message, string title = "Windows Photo Viewer Launcher",
