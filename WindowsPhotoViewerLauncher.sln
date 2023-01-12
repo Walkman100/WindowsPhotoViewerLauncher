@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.4.33205.214
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhotoViewerLauncher", "WindowsPhotoViewerLauncher.csproj", "{6C059E8B-16BC-41BA-B394-73220CDA58D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhotoViewerLauncher", "WindowsPhotoViewerLauncher.csproj", "{EC77498D-7477-49DC-A558-11E887902B2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6C059E8B-16BC-41BA-B394-73220CDA58D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C059E8B-16BC-41BA-B394-73220CDA58D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C059E8B-16BC-41BA-B394-73220CDA58D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C059E8B-16BC-41BA-B394-73220CDA58D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC77498D-7477-49DC-A558-11E887902B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC77498D-7477-49DC-A558-11E887902B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC77498D-7477-49DC-A558-11E887902B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC77498D-7477-49DC-A558-11E887902B2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A8795A94-AB7C-4F2D-8764-D780EA2A136D}
+		SolutionGuid = {76046155-4536-4FE8-8157-2D643E9773C3}
 	EndGlobalSection
 EndGlobal

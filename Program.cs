@@ -1,3 +1,7 @@
+using System;
+using System.IO;
+using System.Windows.Forms;
+
 namespace WindowsPhotoViewerLauncher {
     internal static class Program {
         static void Main(string[] args) {
@@ -6,9 +10,9 @@ namespace WindowsPhotoViewerLauncher {
                 return;
             }
 
-            string? photoViewerDLLPath = null;
+            string photoViewerDLLPath = null;
             foreach (var envVar in new[] { "ProgramW6432", "ProgramFiles", "ProgramFiles(x86)" }) {
-                photoViewerDLLPath = Path.Combine(Environment.GetEnvironmentVariable(envVar) ?? "", "Windows Photo Viewer", "PhotoViewer.dll");
+                photoViewerDLLPath = Path.Combine(Environment.GetEnvironmentVariable(envVar), "Windows Photo Viewer", "PhotoViewer.dll");
                 if (File.Exists(photoViewerDLLPath))
                     break;
             }
@@ -17,9 +21,9 @@ namespace WindowsPhotoViewerLauncher {
                 return;
             }
 
-            string runDLLPath = Path.Combine(Environment.GetEnvironmentVariable("WinDir") ?? "", "Sysnative", "rundll32.exe");
+            string runDLLPath = Path.Combine(Environment.GetEnvironmentVariable("WinDir"), "Sysnative", "rundll32.exe");
             if (!File.Exists(runDLLPath))
-                runDLLPath = Path.Combine(Environment.GetEnvironmentVariable("WinDir") ?? "", "System32", "rundll32.exe");
+                runDLLPath = Path.Combine(Environment.GetEnvironmentVariable("WinDir"), "System32", "rundll32.exe");
 
             const string longFilePathPrefix = @"\\?\";
             const string longFilePathPrefixDoNotStrip = @"\\?\Volume{";
