@@ -103,6 +103,8 @@ Section "Register to open Images"
     WriteRegStr HKLM "Software\WalkmanOSS\${ProgramName}.exe\DefaultIcon" "" "$INSTDIR\${ProgramName}.exe"
     WriteRegStr HKLM "Software\WalkmanOSS\${ProgramName}.exe\shell\open\command" "" "$\"$INSTDIR\${ProgramName}.exe$\""
   WriteRegStr HKLM "SOFTWARE\RegisteredApplications" "${ProgramName}" "Software\WalkmanOSS\${ProgramName}.exe\Capabilities"
+
+  ExecShell "open" "ms-settings:defaultapps"
 SectionEnd
 
 ; Functions
